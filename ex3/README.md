@@ -16,17 +16,19 @@ Pour la classe Employee, je dois pouvoir :
 Testez les comportements attendus dans le fichier main.py
 
 
-Exercise 2: Inheritance
-Step 1 :
-Create two classes on separate files "car" and "bus", these classes can manage: - The registration of the vehicle
-- The color of the vehicle
-However each class has its specificities, the class car allows in addition to: - manage the number of doors of the car
-The bus class allows you to:
-- manage the number of floors of the bus
-Be careful these two classes will inherit a common class that will allow them to share certain characteristics.
-The number of floors and doors are values ​​that never change! A car can not have 1 door for example, likewise a 3-floor bus does not exist.
-2nd step :
-Create an instance of the bus class and the car class, give them the registration and the color of your choice. Indicate the number of floors of your choice for the bus and the number of doors of your choice for the car.
-Step 3:
-View the property values ​​for each vehicle in a row. Change the color of the car and the number of floors of the bus. Display attribute values ​​again
-Do not forget to make sure that the values ​​for the number of doors and floors are the expected values. For example, I can not create a three-story bus. This will allow you to review encapsulation, getters and setters.
+Exercise 3: The magic methods
+In this exercise we will simulate some object behaviors that we could find in the management of a store.
+Your program will consist of two main classes: Customer and Employee. Both inherit a common class Person.
+The person class defines the surname, first name, and age attributes that are common to both the customer and the employee.
+The customer class has as specific attributes a basket, empty by default, which can contain the products that the customer buys and an attribute with the total amount to be paid at checkout. This amount is updated each time a product is added to the cart.
+The class employed has a particular attribute, the status of the employee. By default this one is used. The possible statuses are: employee, technician, manager and manager in order of hierarchy.
+You will also need to create a Product class that represents the products in the store. It has the price and product name attributes.
+You can now instantiate in your main.py file some dummy products, a customer and an employee.
+However we do not stop in this good way. In order to facilitate the use of the application, we want to modify the native behavior of the Customer and Employee classes.
+For the Customer class, I must be able to:
+- Display a complete identity card of the customer by a simple print. In other words, if I have a variable customer containing an instance of the class Customer I must be able to write print (customer) and get in the terminal a small text displaying the name, surname and age of the customer but also the name of the customer. products he has in his basket and the amount to pay.
+- Add a product to the cart by a simple addition. For example, if I have a customer variable representing an instance of the Customer class and a product variable representing an instance of the Product class, I must be able to write customer + product. The product in question is then added to the customer's cart and the total amount payable at the checkout is updated.
+For the Employee class, I must be able to:
+- Display a full identity card of the employee by a simple print. In other words, if I have an employee variable that contains an instance of the Employee class, I must be able to write print (employee) and get a small text in the terminal that displays the surname, first name, and age of the employee, but also status.
+- Check that the employee has the required status with the> = operator. In other words, if I have an employee variable containing an instance of the Employee class with the status 'employee' then I need to be able to write print (employee> = 'manager') and this will show False in the console. Conversely, if I write print (employee> = 'employee'), it should show True in the console.
+Test the expected behaviors in the main.py file
