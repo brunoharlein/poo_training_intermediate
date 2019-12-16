@@ -1,4 +1,3 @@
-# coding: utf-8
 
 from customer import Customer
 from employee import Employee

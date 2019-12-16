@@ -1,4 +1,3 @@
-# coding: utf-8
 
 from person import Person
 from product import Product
@@ -10,6 +9,7 @@ class Customer(Person):
         super().__init__(name, firstname, age)
 
     def __str__(self):
+        """To get called by built-int str() method to return a string representation of a type."""
         product_names = [product.name for product in self.chart]
         text = "Carte d'identité du client\n\
         Nom : {}\n\
@@ -21,6 +21,7 @@ class Customer(Person):
 
 
     def __add__(self, product):
+        """To get called on add operation using + operator"""
         if isinstance(product, Product):
             self.chart.append(product)
             self.amount_to_pay += product.price

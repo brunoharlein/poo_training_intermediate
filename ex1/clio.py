@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class Clio():
-    """Class representing a clio car. Class attributs give the specificities of the car model.
+    """Class representing a clio car. Class attributs give the specificitie of the car model.
     price_range = a list with the minimum and maximum possible prices for a new car
     price = an integer for the price of a new car
     doors = a list with the possible number of doors

@@ -14,3 +14,7 @@ if __name__ == "__main__":
     print(clio.price)
     clio2 = Clio(5, 'green')
     print(clio2.price)
+    clio_Emira = Clio(5, "red")
+    print(clio_Emira.price)
+    Clio.update_price(30000)
+    print(clio_Emira.price)

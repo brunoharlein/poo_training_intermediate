@@ -5,7 +5,7 @@ from bus import Bus
 
 if __name__ == '__main__':
 
-    car = Car(3, 213551, 'black')
+    car = Car(3, 213551, "white")
     print(car.license_number)
     print(car.color)
     print(car.number_doors)
